@@ -5,6 +5,13 @@
 # Note: Return k after placing the final result in the first k slots of the array.
 
 
+#Approach
+# Take a variable i as 0;
+# Use a for loop by using a variable ‘j’ from 1 to length of the array.
+# If arr[j] != arr[i], increase ‘i’ and update arr[i] == arr[j].
+#  After completion of the loop return i+1, i.e size of the array of unique elements
+#TC: O(N)
+
 def removeDups(arr):
   i = 0
   for j in range(1,len(arr)):
@@ -14,3 +21,4 @@ def removeDups(arr):
   return i+1
 arr = [1,1,2,2,2,3,3]
 print(removeDups(arr))
+
