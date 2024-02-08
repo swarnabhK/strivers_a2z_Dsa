@@ -13,6 +13,9 @@ def rotateRight(self, head, k: int):
     #if k == length, no rotation needs to be done, return the head.
     if k==0:
         return head
+    
+    # rotation is basically, find the kth node from the end, that will be the new head, and last node of the original linked list
+    # will be connected to the original head of the linked list
     for _ in range(k):
         fast = fast.next
     while fast.next:
